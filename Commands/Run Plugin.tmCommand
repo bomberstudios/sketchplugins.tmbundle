@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveActiveFile</string>
+	<key>command</key>
+	<string>#!/usr/bin/env bash
+
+cmd_output=`"$TM_BUNDLE_SUPPORT"/bin/coscript -e "[[[COScript app:'Sketch Beta'] delegate] runPluginAtURL:[NSURL fileURLWithPath:'$TM_FILEPATH']]"`
+
+echo "$cmd_output"
+</string>
+	<key>input</key>
+	<string>document</string>
+	<key>inputFormat</key>
+	<string>text</string>
+	<key>keyEquivalent</key>
+	<string>@r</string>
+	<key>name</key>
+	<string>Run Plugin</string>
+	<key>outputCaret</key>
+	<string>afterOutput</string>
+	<key>outputFormat</key>
+	<string>text</string>
+	<key>outputLocation</key>
+	<string>newWindow</string>
+	<key>scope</key>
+	<string>source.js.cocoascript</string>
+	<key>uuid</key>
+	<string>63B07853-ADEC-4B4B-8229-029EE316BE2C</string>
+	<key>version</key>
+	<integer>2</integer>
+</dict>
+</plist>

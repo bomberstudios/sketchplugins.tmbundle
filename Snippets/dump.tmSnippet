@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>function dump(obj){
+  log("#####################################################################################")
+  log("## Dumping object " + obj )
+  log("## obj class is: " + [obj className])
+  log("#####################################################################################")
+
+  log("obj.properties:")
+  log([obj class].mocha().properties())
+  log("obj.propertiesWithAncestors:")
+  log([obj class].mocha().propertiesWithAncestors())
+
+  log("obj.classMethods:")
+  log([obj class].mocha().classMethods())
+  log("obj.classMethodsWithAncestors:")
+  log([obj class].mocha().classMethodsWithAncestors())
+
+  log("obj.instanceMethods:")
+  log([obj class].mocha().instanceMethods())
+  log("obj.instanceMethodsWithAncestors:")
+  log([obj class].mocha().instanceMethodsWithAncestors())
+
+  log("obj.protocols:")
+  log([obj class].mocha().protocols())
+  log("obj.protocolsWithAncestors:")
+  log([obj class].mocha().protocolsWithAncestors())
+
+  log("obj.treeAsDictionary():")
+  log(obj.treeAsDictionary())
+}
+</string>
+	<key>name</key>
+	<string>dump</string>
+	<key>scope</key>
+	<string>source.js.cocoascript</string>
+	<key>tabTrigger</key>
+	<string>dump</string>
+	<key>uuid</key>
+	<string>2800E1D4-8250-49A6-B222-B79130BAE7AA</string>
+</dict>
+</plist>
