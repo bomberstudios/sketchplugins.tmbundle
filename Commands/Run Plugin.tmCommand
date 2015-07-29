@@ -7,7 +7,7 @@
 	<key>command</key>
 	<string>#!/usr/bin/env bash
 
-cmd_output=`"$TM_BUNDLE_SUPPORT"/bin/coscript -e "[[[COScript app:'Sketch Beta'] delegate] runPluginAtURL:[NSURL fileURLWithPath:'$TM_FILEPATH']]"`
+cmd_output=`"$TM_BUNDLE_SUPPORT"/bin/coscript -e "[[[COScript app:'Sketch'] delegate] runPluginAtURL:[NSURL fileURLWithPath:'$TM_FILEPATH']]"`
 clean=`echo "$cmd_output" | sed -e "s/\\&lt;/\\&amp;lt\\;/g" | sed -e "s/\\&gt;/\\&amp;gt\\;/g"`
 
 echo "&lt;style&gt;pre code { font-family: Consolas, Menlo; font-size: 13px; }&lt;/style&gt;"
